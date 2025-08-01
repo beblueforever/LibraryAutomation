@@ -1,0 +1,62 @@
+﻿@model List<LibraryAutomation.Models.Loan>
+@{
+    ViewData["Title"] = "Kitap Geçmişim";
+}
+
+<h2>Kitap Geçmişim</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Kitap Adı</th>
+            <th>Yazar</th>
+            <th>Alış Tarihi</th>
+            <th>İade Tarihi</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var loan in Model)
+        {
+            <tr>
+                <td>@loan.BookCopy.Book.Title</td>
+                <td>@loan.BookCopy.Book.Author</td>
+                <td>@loan.BorrowDate.ToString("dd.MM.yyyy")</td>
+                <td>
+                    @if (loan.ReturnDate.HasValue)
+                    {
+                        @loan.ReturnDate.Value.ToString("dd.MM.yyyy")
+                    }
+                    else
+                    {
+                        <span class="text-warning">Henüz iade edilmedi</span>
+                    }
+                </td>
+                <td>
+                    @if (!loan.ReturnDate.HasValue)
+                    {
+                        <form asp-action="ReturnBook" asp-controller="Member" method="post">
+                            <input type="hidden" name="loanId" value="@loan.Id" />
+                            <button type="submit" class="btn btn-success btn-sm">Teslim Et</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="text-muted">İade edildi</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Dashboard" class="btn btn-secondary">← Kitap Listesine Dön</a>

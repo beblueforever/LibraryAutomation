@@ -1,0 +1,47 @@
+﻿@model List<LibraryAutomation.Models.Book>
+
+@{
+    ViewData["Title"] = "Kitaplar";
+}
+
+
+
+<h2>Mevcut Kitaplar</h2>
+
+<a asp-action="MyLoans" class="btn btn-success">Kitap Geçmişim</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Kitap Adı</th>
+            <th>Yazar</th>
+            <th>Stok</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Copies.Count()</td>
+                <td>
+                    @if (book.Copies.Count > 0)
+                    {
+                        <form asp-controller="Member" asp-action="BorrowBook" method="post">
+                            <input type="hidden" name="bookId" value="@book.Id" />
+                            <button type="submit" class="btn btn-primary btn-sm">Kirala</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="text-danger">Stokta yok</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

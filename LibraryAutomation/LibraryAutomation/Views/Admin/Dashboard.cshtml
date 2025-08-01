@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h2>Admin Paneli</h2>
+
+<ul>
+    <li>Toplam Kitap Sayısı: @ViewBag.BookCount</li>
+    <li>Toplam Üye Sayısı: @ViewBag.MemberCount</li>
+    <li>Aktif Ödünç Kitaplar: @ViewBag.ActiveLoans</li>
+</ul>
+
+<hr />
+
+<a asp-controller="Admin" asp-action="BookList" class="btn btn-primary">Kitap Listesi</a>
+<a asp-controller="Admin" asp-action="AddBook" class="btn btn-success">Yeni Kitap Ekle</a>
+<a asp-controller="Admin" asp-action="MemberBookList" class="btn btn-warning">Üye Kitap Geçmişi</a>
+<a asp-controller="Admin" asp-action="BookStock" class="btn btn-info">Stok Durumu</a>
+

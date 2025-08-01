@@ -1,0 +1,20 @@
+﻿@model LibraryAutomation.Models.Book
+
+@{
+    ViewData["Title"] = "Kitap Sil";
+}
+
+<h2>Kitap Sil</h2>
+
+<h4>@Model.Title</h4>
+<p><strong>Yazar:</strong> @Model.Author</p>
+<p><strong>Yayınevi:</strong> @Model.Publisher</p>
+<p><strong>Toplam Stok (Kopya Sayısı):</strong> @Model.Copies.Count()</p>
+
+<form asp-action="DeleteBook" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <p>Bu kitabı silmek istediğinize emin misiniz?</p>
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="BookList" class="btn btn-secondary">İptal</a>
+</form>

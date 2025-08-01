@@ -1,0 +1,27 @@
+﻿@model List<LibraryAutomation.Models.BookStockViewModel>
+
+<h2>Kitap Stok Durumu</h2>
+
+<a asp-action="Dashboard" class="btn btn-secondary">← Anasayfaya Geri Dön</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Kitap Başlığı</th>
+            <th>Yazar</th>
+            <th>Yayın Evi</th>
+            <th>Stok Adedi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Author</td>
+                <td>@item.Publisher</td>
+                <td>@item.TotalStock</td>  @* Burada Stock değil TotalStock *@
+            </tr>
+        }
+    </tbody>
+</table>

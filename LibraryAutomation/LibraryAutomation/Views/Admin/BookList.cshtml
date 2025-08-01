@@ -1,0 +1,40 @@
+﻿@model List<LibraryAutomation.Models.Book>
+
+<h2>Kitap Listesi</h2>
+
+<a asp-action="Dashboard" class="btn btn-secondary">←Anasayfaya Geri Dön</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Başlık</th>
+            <th>Yazar</th>
+            <th>Yayınevi</th>
+            <th>Fiziksel Konumlar</th>
+            <th>Toplam Stok</th>
+            <th>Mevcut Stok</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Id</td>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Publisher</td>
+                <td>
+                    @string.Join(", ", book.Copies.Select(c => c.PhysicalLocation))
+                </td>
+                <td>@book.Copies.Count()</td>  <!-- Toplam stok -->
+                <td>@book.Copies.Count(c => !c.IsBorrowed)</td> <!-- Mevcut stok -->
+                <td>
+                    <a asp-action="EditBook" asp-route-id="@book.Id" class="btn btn-sm btn-warning">Düzenle</a>
+                    <a asp-action="DeleteBook" asp-route-id="@book.Id" class="btn btn-sm btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,31 @@
+﻿@model List<LibraryAutomation.Models.Loan>
+
+<h2>Üye Kitap Geçmişi</h2>
+
+<a asp-action="Dashboard" class="btn btn-secondary">←Anasayfaya Geri Dön</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Üye Adı</th>
+            <th>Kitap Başlığı</th>
+            <th>Ödünç Alma Tarihi</th>
+            <th>İade Tarihi</th>
+            <th>Durum</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var loan in Model)
+        {
+            <tr>
+                <td>@loan.Member.Name</td>
+                <td>@loan.BookCopy.Book.Title</td> <!-- Burada loan.Book yerine loan.BookCopy.Book -->
+                <td>@loan.BorrowDate.ToShortDateString()</td>
+                <td>@(loan.ReturnDate.HasValue ? loan.ReturnDate.Value.ToShortDateString() : "-")</td>
+                <td>
+                    @(loan.ReturnDate == null ? "Ödünçte" : "İade Edildi")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
