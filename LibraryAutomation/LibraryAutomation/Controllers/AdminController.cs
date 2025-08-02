@@ -89,26 +89,66 @@ namespace LibraryAutomation.Controllers
         public IActionResult EditBook(int id)
         {
             var book = _context.Books
+
         .Include(b => b.Copies)
         .FirstOrDefault(b => b.Id == id);
 
             if (book == null) return NotFound();
 
+            var model = new EditBookViewModel
+            {
+                Id = book.Id,
+                Title = book.Title,
+                Author = book.Author,
+                Publisher = book.Publisher,
+                Description = book.Description,
+                CatalogId = book.CatalogId,
+                Copies = book.Copies.Select(c => new BookCopyEditViewModel
+                {
+                    Id = c.Id,
+                    PhysicalLocation = c.PhysicalLocation
+                }).ToList()
+            };
+
             ViewBag.Catalogs = new SelectList(_context.Catalogs, "Id", "Name", book.CatalogId);
-            return View(book);
+            return View(model);
         }
 
         // Kitap düzenleme POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult EditBook(Book book)
+        public IActionResult EditBook(EditBookViewModel model)
         {
             if (!ModelState.IsValid)
-                return View(book);
+            {
+                ViewBag.Catalogs = new SelectList(_context.Catalogs, "Id", "Name", model.CatalogId);
+                return View(model);
+            }
 
-            _context.Books.Update(book);
+            var book = _context.Books
+                .Include(b => b.Copies)
+                .FirstOrDefault(b => b.Id == model.Id);
+
+            if (book == null) return NotFound();
+
+            book.Title = model.Title;
+            book.Author = model.Author;
+            book.Publisher = model.Publisher;
+            book.Description = model.Description;
+            book.CatalogId = model.CatalogId;
+
+            // Her bir kopyanın lokasyonunu güncelle
+            foreach (var copyModel in model.Copies)
+            {
+                var copy = book.Copies.FirstOrDefault(c => c.Id == copyModel.Id);
+                if (copy != null)
+                {
+                    copy.PhysicalLocation = copyModel.PhysicalLocation;
+                }
+            }
+
             _context.SaveChanges();
-            return RedirectToAction("BookList");
+            return RedirectToAction("Dashboard");
         }
 
         // Kitap silme
@@ -125,6 +165,39 @@ namespace LibraryAutomation.Controllers
             }
 
             return RedirectToAction("BookList");
+        }
+
+        [HttpGet]
+        public IActionResult DeleteCopy(int id)
+        {
+            var copy = _context.BookCopies.FirstOrDefault(c => c.Id == id);
+            if (copy == null)
+            {
+                return NotFound();
+            }
+
+            int bookId = copy.BookId; // Kitabın id'sini al, sonra yönlendirmek için
+
+            _context.BookCopies.Remove(copy);
+            _context.SaveChanges();
+
+            return RedirectToAction("EditBook", new { id = bookId });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteCopyConfirmed(int id)
+        {
+            var copy = _context.BookCopies.FirstOrDefault(c => c.Id == id);
+            if (copy == null)
+                return NotFound();
+
+            int bookId = copy.BookId; // Önce sakla çünkü birazdan sileceğiz
+
+            _context.BookCopies.Remove(copy);
+            _context.SaveChanges();
+
+            return RedirectToAction("EditBook", new { id = bookId });
         }
 
         // Kitap stok bilgisi listeleme

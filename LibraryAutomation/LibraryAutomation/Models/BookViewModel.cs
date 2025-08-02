@@ -2,7 +2,7 @@
 
 namespace LibraryAutomation.Models
 {
-    public class BookViewModel
+    public class BookViewModel  // ekleme yaparken kullanıyoruz genellikle.
     {
         [Required(ErrorMessage = "Başlık gereklidir")]
         public string Title { get; set; }

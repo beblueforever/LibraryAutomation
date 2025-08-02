@@ -2,6 +2,7 @@
 using LibraryAutomation.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,41 +18,35 @@ namespace LibraryAutomation.Controllers
             _context = context;
         }
 
-        // Üye ana sayfası: kitapları stok durumu ile listeler
+        // Üye ana sayfası: kitapları ve her birinin stok durumunu listeler
         public IActionResult Dashboard()
         {
             var username = HttpContext.Session.GetString("username");
             var role = HttpContext.Session.GetString("role");
 
             if (string.IsNullOrEmpty(username) || role != "Member")
-            {
                 return RedirectToAction("Login", "Account");
-            }
 
             ViewBag.Username = username;
 
             var books = _context.Books
-                .Select(book => new
+                .Include(b => b.Copies)
+                .ToList()
+                .Select(book =>
                 {
-                    Book = book,
-                    AvailableCopies = _context.BookCopies.Count(c => c.BookId == book.Id && !c.IsBorrowed)
-                })
-                .AsEnumerable()
-                .Select(x =>
-                {
-                    // Geçici stok bilgisi için ekstra property yoksa view model veya ViewBag ile gönderilebilir
-                    // Burada ViewBag veya ViewModel daha temiz olur ama senin yapında Book içinde yok
-                    x.Book.Description = $"Stok: {x.AvailableCopies}";
-                    return x.Book;
+                    var availableCount = book.Copies.Count(c => !c.IsBorrowed);
+                    book.Description = $"Stok: {availableCount}"; // Description alanı geçici olarak stok bilgisi için kullanılıyor
+                    return book;
                 })
                 .ToList();
 
             return View(books);
         }
 
-        // Kitap kiralama işlemi
+        // Kitap ödünç alma işlemi
         [HttpPost]
-        public async Task<IActionResult> BorrowBook(int bookId)
+       
+        public async Task<IActionResult> BorrowBook(int bookId, int copyId)
         {
             var role = HttpContext.Session.GetString("role");
             var userId = HttpContext.Session.GetInt32("userId");
@@ -66,22 +61,42 @@ namespace LibraryAutomation.Controllers
                 return RedirectToAction("Dashboard");
             }
 
-            // Ödünç alınabilir ilk kitap kopyasını bul
-            var availableCopy = await _context.BookCopies
-                .FirstOrDefaultAsync(c => c.BookId == bookId && !c.IsBorrowed);
+            // Üyenin bu kitapla ilgili aktif bir ödünç kaydı var mı? (henüz iade edilmemiş)
+            bool alreadyBorrowed = await _context.Loans
+                .Include(l => l.BookCopy)
+                .AnyAsync(l => l.MemberId == member.Id &&
+                               l.BookCopy.BookId == bookId &&
+                               l.ReturnDate == null);
 
-            if (availableCopy == null)
+            if (alreadyBorrowed)
             {
-                TempData["Error"] = "Kitap stokta yok.";
+                TempData["Error"] = "Bu kitabı zaten ödünç aldınız. İade etmeden tekrar alamazsınız.";
                 return RedirectToAction("Dashboard");
             }
 
-            availableCopy.IsBorrowed = true;
+            // copyId ile seçilen kopyayı al
+            var selectedCopy = await _context.BookCopies
+                .FirstOrDefaultAsync(c => c.Id == copyId && c.BookId == bookId);
+
+            if (selectedCopy == null)
+            {
+                TempData["Error"] = "Seçilen kitap kopyası bulunamadı.";
+                return RedirectToAction("Dashboard");
+            }
+
+            if (selectedCopy.IsBorrowed)
+            {
+                TempData["Error"] = "Seçilen kitap kopyası zaten ödünç alınmış.";
+                return RedirectToAction("Dashboard");
+            }
+
+            // Kitap kopyasını ödünç al
+            selectedCopy.IsBorrowed = true;
 
             var loan = new Loan
             {
                 MemberId = member.Id,
-                BookCopyId = availableCopy.Id,
+                BookCopyId = selectedCopy.Id,
                 BorrowDate = DateTime.Now,
                 ReturnDate = null
             };
@@ -93,6 +108,8 @@ namespace LibraryAutomation.Controllers
             return RedirectToAction("Dashboard");
         }
 
+
+
         // Kitap iade işlemi
         [HttpPost]
         public async Task<IActionResult> ReturnBook(int loanId)
@@ -103,7 +120,7 @@ namespace LibraryAutomation.Controllers
 
             if (loan == null || loan.ReturnDate != null)
             {
-                TempData["Error"] = "İade edilemedi.";
+                TempData["Error"] = "İade edilemedi veya zaten iade edilmiş.";
                 return RedirectToAction("MyLoans");
             }
 
@@ -112,11 +129,11 @@ namespace LibraryAutomation.Controllers
 
             await _context.SaveChangesAsync();
 
-            TempData["Success"] = "Kitap iade edildi.";
+            TempData["Success"] = "Kitap başarıyla iade edildi.";
             return RedirectToAction("MyLoans");
         }
 
-        // Üyenin ödünç aldığı kitapların geçmişi
+        // Üyenin ödünç geçmişi
         public IActionResult MyLoans()
         {
             var userId = HttpContext.Session.GetInt32("userId");

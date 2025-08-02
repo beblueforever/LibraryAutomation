@@ -1,37 +1,46 @@
 ﻿@model List<LibraryAutomation.Models.Book>
 
 @{
-    ViewData["Title"] = "Kitaplar";
+    ViewData["Title"] = "Mevcut Kitaplar";
 }
-
-
 
 <h2>Mevcut Kitaplar</h2>
 
-<a asp-action="MyLoans" class="btn btn-success">Kitap Geçmişim</a>
+<a asp-action="MyLoans" class="btn btn-success mb-2">Kitap Geçmişim</a>
 
 <table class="table">
     <thead>
         <tr>
             <th>Kitap Adı</th>
             <th>Yazar</th>
-            <th>Stok</th>
+            <th>Stok (Mevcut)</th>
             <th>İşlem</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var book in Model)
         {
+            var availableCopies = book.Copies.Where(c => !c.IsBorrowed).ToList();
             <tr>
                 <td>@book.Title</td>
                 <td>@book.Author</td>
-                <td>@book.Copies.Count()</td>
+                <td>@availableCopies.Count</td>
                 <td>
-                    @if (book.Copies.Count > 0)
+                    @if (availableCopies.Any())
                     {
                         <form asp-controller="Member" asp-action="BorrowBook" method="post">
                             <input type="hidden" name="bookId" value="@book.Id" />
-                            <button type="submit" class="btn btn-primary btn-sm">Kirala</button>
+
+                            <div class="form-group">
+                                <select name="copyId" class="form-control">
+                                    @foreach (var copy in availableCopies)
+                                    {
+                                        <option value="@copy.Id">@copy.PhysicalLocation</option>
+                                    }
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-sm mt-1">Kirala</button>
                         </form>
                     }
                     else
@@ -43,5 +52,3 @@
         }
     </tbody>
 </table>
-
-

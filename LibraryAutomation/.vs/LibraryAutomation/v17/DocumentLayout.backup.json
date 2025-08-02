@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\views\\admin\\editbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\views\\admin\\editbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\views\\member\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\views\\member\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\bookstockviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\bookstockviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Migrations\\20250730134604_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LibraryAutomation\\Migrations\\20250730134604_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\bookcopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\bookcopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\views\\member\\myloans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\views\\member\\myloans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\bookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\bookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\views\\admin\\editbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\views\\admin\\editbook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\editbookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\editbookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\views\\admin\\deletebook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\views\\admin\\deletebook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\views\\admin\\memberbooklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -27,52 +59,24 @@
       "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\views\\admin\\bookstock.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\views\\member\\myloans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\views\\member\\myloans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\views\\member\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\views\\member\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\views\\admin\\deletebook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\views\\admin\\deletebook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\views\\admin\\booklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\views\\admin\\booklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\catalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\catalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\bookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\bookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\bookstockviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\bookstockviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\models\\bookcopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\models\\bookcopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\data\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\data\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|c:\\users\\seymakaya\\desktop\\libraryautomation\\libraryautomation\\libraryautomation\\migrations\\20250730134604_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E356FE92-13DB-406C-9B9C-82450AB0F401}|LibraryAutomation\\LibraryAutomation.csproj|solutionrelative:libraryautomation\\migrations\\20250730134604_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,32 +86,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20250730134604_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Migrations\\20250730134604_InitialCreate.cs",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Migrations\\20250730134604_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Migrations\\20250730134604_InitialCreate.cs",
-              "RelativeToolTip": "LibraryAutomation\\Migrations\\20250730134604_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\Book.cs",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\Book.cs",
+              "RelativeToolTip": "LibraryAutomation\\Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T13:46:04.918Z",
+              "WhenOpened": "2025-07-30T12:40:39.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MemberController.cs",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Controllers\\MemberController.cs",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Controllers\\MemberController.cs",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Controllers\\MemberController.cs",
+              "RelativeToolTip": "LibraryAutomation\\Controllers\\MemberController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAADwvy8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T12:55:55.642Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BookStock.cshtml",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\BookStock.cshtml",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Admin\\BookStock.cshtml",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\BookStock.cshtml",
-              "RelativeToolTip": "LibraryAutomation\\Views\\Admin\\BookStock.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBsAAAAAAAAAAAAAAA==",
+              "Title": "BookCopy.cs",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookCopy.cs",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\BookCopy.cs",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookCopy.cs",
+              "RelativeToolTip": "LibraryAutomation\\Models\\BookCopy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T12:53:23.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookStockViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookStockViewModel.cs",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\BookStockViewModel.cs",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookStockViewModel.cs",
+              "RelativeToolTip": "LibraryAutomation\\Models\\BookStockViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T12:40:48.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookViewModel.cs",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\BookViewModel.cs",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookViewModel.cs",
+              "RelativeToolTip": "LibraryAutomation\\Models\\BookViewModel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T12:40:34.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Member\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Member\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Member\\Dashboard.cshtml",
+              "RelativeToolTip": "LibraryAutomation\\Views\\Member\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-30T13:44:38.49Z",
+              "WhenOpened": "2025-07-30T13:41:04.301Z",
               "EditorCaption": ""
             },
             {
@@ -118,79 +174,103 @@
               "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Member\\MyLoans.cshtml",
               "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Member\\MyLoans.cshtml",
               "RelativeToolTip": "LibraryAutomation\\Views\\Member\\MyLoans.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-30T13:43:05.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Dashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Member\\Dashboard.cshtml",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Member\\Dashboard.cshtml",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Member\\Dashboard.cshtml",
-              "RelativeToolTip": "LibraryAutomation\\Views\\Member\\Dashboard.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-30T13:41:04.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EditBook.cshtml",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\EditBook.cshtml",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Admin\\EditBook.cshtml",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\EditBook.cshtml",
-              "RelativeToolTip": "LibraryAutomation\\Views\\Admin\\EditBook.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-30T12:59:42.229Z",
+              "DocumentIndex": 2,
+              "Title": "Loan.cs",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\Loan.cs",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\Loan.cs",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\Loan.cs",
+              "RelativeToolTip": "LibraryAutomation\\Models\\Loan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T12:40:01.802Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "DeleteBook.cshtml",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\DeleteBook.cshtml",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Admin\\DeleteBook.cshtml",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\DeleteBook.cshtml",
-              "RelativeToolTip": "LibraryAutomation\\Views\\Admin\\DeleteBook.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-30T12:59:11.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "LibraryAutomation\\Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Controllers\\AdminController.cs",
               "RelativeToolTip": "LibraryAutomation\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAIwGIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAowK8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T12:34:31.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\Book.cs",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\Book.cs",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\Book.cs",
-              "RelativeToolTip": "LibraryAutomation\\Models\\Book.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAywBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:40:39.114Z",
+              "DocumentIndex": 11,
+              "Title": "DeleteBook.cshtml",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\DeleteBook.cshtml",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Admin\\DeleteBook.cshtml",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\DeleteBook.cshtml",
+              "RelativeToolTip": "LibraryAutomation\\Views\\Admin\\DeleteBook.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T12:59:11.291Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "EditBook.cshtml",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\EditBook.cshtml",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Admin\\EditBook.cshtml",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\EditBook.cshtml",
+              "RelativeToolTip": "LibraryAutomation\\Views\\Admin\\EditBook.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAIwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T12:59:42.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BookStock.cshtml",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\BookStock.cshtml",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Admin\\BookStock.cshtml",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\BookStock.cshtml",
+              "RelativeToolTip": "LibraryAutomation\\Views\\Admin\\BookStock.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-30T13:44:38.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EditBookViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\EditBookViewModel.cs",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\EditBookViewModel.cs",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\EditBookViewModel.cs",
+              "RelativeToolTip": "LibraryAutomation\\Models\\EditBookViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T08:02:28.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20250730134604_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Migrations\\20250730134604_InitialCreate.cs",
+              "RelativeDocumentMoniker": "LibraryAutomation\\Migrations\\20250730134604_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Migrations\\20250730134604_InitialCreate.cs",
+              "RelativeToolTip": "LibraryAutomation\\Migrations\\20250730134604_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T13:46:04.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "MemberBookList.cshtml",
               "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\MemberBookList.cshtml",
               "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Admin\\MemberBookList.cshtml",
@@ -198,25 +278,11 @@
               "RelativeToolTip": "LibraryAutomation\\Views\\Admin\\MemberBookList.cshtml",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-30T13:45:21.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T13:45:21.769Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MemberController.cs",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Controllers\\MemberController.cs",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Controllers\\MemberController.cs",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Controllers\\MemberController.cs",
-              "RelativeToolTip": "LibraryAutomation\\Controllers\\MemberController.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAAAJAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:55:55.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Member.cs",
               "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\Member.cs",
               "RelativeDocumentMoniker": "LibraryAutomation\\Models\\Member.cs",
@@ -224,12 +290,11 @@
               "RelativeToolTip": "LibraryAutomation\\Models\\Member.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:54:36.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T12:54:36.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Catalog.cs",
               "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\Catalog.cs",
               "RelativeDocumentMoniker": "LibraryAutomation\\Models\\Catalog.cs",
@@ -237,51 +302,11 @@
               "RelativeToolTip": "LibraryAutomation\\Models\\Catalog.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAcwA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:54:02.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T12:54:02.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "BookCopy.cs",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookCopy.cs",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\BookCopy.cs",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookCopy.cs",
-              "RelativeToolTip": "LibraryAutomation\\Models\\BookCopy.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAUwAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:53:23.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BookStockViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookStockViewModel.cs",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\BookStockViewModel.cs",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookStockViewModel.cs",
-              "RelativeToolTip": "LibraryAutomation\\Models\\BookStockViewModel.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAA0wAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:40:48.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Loan.cs",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\Loan.cs",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\Loan.cs",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\Loan.cs",
-              "RelativeToolTip": "LibraryAutomation\\Models\\Loan.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAUwA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:40:01.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "BookList.cshtml",
               "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Views\\Admin\\BookList.cshtml",
               "RelativeDocumentMoniker": "LibraryAutomation\\Views\\Admin\\BookList.cshtml",
@@ -289,8 +314,7 @@
               "RelativeToolTip": "LibraryAutomation\\Views\\Admin\\BookList.cshtml",
               "ViewState": "AgIAABcAAAAAAAAAAAAAACQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-30T12:42:06.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T12:42:06.527Z"
             },
             {
               "$type": "Document",
@@ -302,21 +326,7 @@
               "RelativeToolTip": "LibraryAutomation\\Data\\LibraryDbContext.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:42:48.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BookViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookViewModel.cs",
-              "RelativeDocumentMoniker": "LibraryAutomation\\Models\\BookViewModel.cs",
-              "ToolTip": "C:\\Users\\seymakaya\\Desktop\\LibraryAutomation\\LibraryAutomation\\LibraryAutomation\\Models\\BookViewModel.cs",
-              "RelativeToolTip": "LibraryAutomation\\Models\\BookViewModel.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAiwBgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T12:40:34.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T12:42:48.418Z"
             }
           ]
         }

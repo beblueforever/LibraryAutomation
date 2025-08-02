@@ -1,20 +1,17 @@
-﻿@model LibraryAutomation.Models.Book
+﻿@model LibraryAutomation.Models.BookCopy
 
 @{
-    ViewData["Title"] = "Kitap Sil";
+    ViewData["Title"] = "Kopya Sil";
 }
 
-<h2>Kitap Sil</h2>
+<h2>Kopya Sil</h2>
 
-<h4>@Model.Title</h4>
-<p><strong>Yazar:</strong> @Model.Author</p>
-<p><strong>Yayınevi:</strong> @Model.Publisher</p>
-<p><strong>Toplam Stok (Kopya Sayısı):</strong> @Model.Copies.Count()</p>
+<p><strong>Fiziksel Lokasyon:</strong> @Model.PhysicalLocation</p>
 
-<form asp-action="DeleteBook" method="post">
+<form asp-action="DeleteCopyConfirmed" method="post">
     @Html.AntiForgeryToken()
     <input type="hidden" asp-for="Id" />
-    <p>Bu kitabı silmek istediğinize emin misiniz?</p>
+    <p>Bu kitap kopyasını silmek istediğinize emin misiniz?</p>
     <button type="submit" class="btn btn-danger">Sil</button>
-    <a asp-action="BookList" class="btn btn-secondary">İptal</a>
+    <a asp-action="EditBook" asp-route-id="@Model.BookId" class="btn btn-secondary">İptal</a>
 </form>
