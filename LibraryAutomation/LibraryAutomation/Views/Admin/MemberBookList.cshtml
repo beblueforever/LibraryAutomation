@@ -7,8 +7,12 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Üye Adı</th>
+            <th>Üye Adı Soyadı</th>
             <th>Kitap Başlığı</th>
+            <th>Yazar Adı Soyadı</th>
+            <th> Yayınevi</th>
+            <th>Kopya ID / ISBN</th> 
+            <th>Fiziksel Konum</th> 
             <th>Ödünç Alma Tarihi</th>
             <th>İade Tarihi</th>
             <th>Durum</th>
@@ -18,12 +22,16 @@
         @foreach (var loan in Model)
         {
             <tr>
-                <td>@loan.Member.Name</td>
-                <td>@loan.BookCopy.Book.Title</td> <!-- Burada loan.Book yerine loan.BookCopy.Book -->
+                <td>@loan.Member.Name @loan.Member.Surname</td>
+                <td>@loan.BookCopy.Book.Title</td>
+                <td>@loan.BookCopy.Book.Author</td>
+                <td>@loan.BookCopy.Book.Publisher</td>
+                <td>@loan.BookCopy.Id</td> 
+                <td>@loan.BookCopy.PhysicalLocation</td> 
                 <td>@loan.BorrowDate.ToShortDateString()</td>
                 <td>@(loan.ReturnDate.HasValue ? loan.ReturnDate.Value.ToShortDateString() : "-")</td>
                 <td>
-                    @(loan.ReturnDate == null ? "Ödünçte" : "İade Edildi")
+                    @(loan.ReturnDate == null ? "Ödünçte" : "İade Edildi") <!-- Ödünçte olup olmadığını iade tarihine göre kontrol ettim. -->
                 </td>
             </tr>
         }

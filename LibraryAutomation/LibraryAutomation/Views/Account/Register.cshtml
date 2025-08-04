@@ -1,7 +1,8 @@
-﻿@model LibraryAutomation.Models.Member
+﻿@model LibraryAutomation.Models.RegisterViewModel
 @using LibraryAutomation.Models
 
 <h2>Kayıt Ol</h2>
+<span asp-validation-for="UserName" class="text-danger"></span>
 
 <form asp-action="Register" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>

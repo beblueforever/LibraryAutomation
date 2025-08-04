@@ -25,9 +25,14 @@
                 <td>@book.Title</td>
                 <td>@book.Author</td>
                 <td>@book.Publisher</td>
+                
                 <td>
-                    @string.Join(", ", book.Copies.Select(c => c.PhysicalLocation))
+                        @foreach (var group in book.Copies.GroupBy(c => c.PhysicalLocation))
+                        {
+                        <div>@group.Key: @group.Count() adet</div>
+                        }
                 </td>
+                
                 <td>@book.Copies.Count()</td>  <!-- Toplam stok -->
                 <td>@book.Copies.Count(c => !c.IsBorrowed)</td> <!-- Mevcut stok -->
                 <td>

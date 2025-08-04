@@ -8,7 +8,8 @@
         public int TotalStock { get; set; }
         public int Available { get; set; }
         public int Borrowed { get; set; }
-      
+
+        public List<string> PhysicalLocations { get; set; } = new List<string>();
 
     }
 }

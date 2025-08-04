@@ -5,7 +5,14 @@
 }
 
 <h2>Mevcut Kitaplar</h2>
-
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
 <a asp-action="MyLoans" class="btn btn-success mb-2">Kitap Geçmişim</a>
 
 <table class="table">
@@ -20,7 +27,13 @@
     <tbody>
         @foreach (var book in Model)
         {
-            var availableCopies = book.Copies.Where(c => !c.IsBorrowed).ToList();
+            // Kiralanmamış (mevcut) kitap kopyaları
+            var availableCopies = book.Copies
+            .Where(c => !c.IsBorrowed)
+            .GroupBy(c => c.PhysicalLocation)       // Lokasyona göre grupla
+            .Select(g => g.First())                // Her lokasyondan sadece bir tanesini al
+            .ToList();
+
             <tr>
                 <td>@book.Title</td>
                 <td>@book.Author</td>

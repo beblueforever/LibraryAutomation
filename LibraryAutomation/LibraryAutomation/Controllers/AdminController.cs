@@ -51,33 +51,58 @@ namespace LibraryAutomation.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddBook(BookViewModel model)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || model.PhysicalLocations == null || model.PhysicalLocations.Count != model.Stock)
             {
-                ViewBag.Catalogs = new SelectList(_context.Catalogs, "Id", "Name");
+                if (model.PhysicalLocations == null || model.PhysicalLocations.Count != model.Stock)
+                {
+                    ModelState.AddModelError("", "Lütfen her kitap kopyası için bir fiziksel konum girin.");
+                }
+
+                
+    ViewBag.Catalogs = new SelectList(_context.Catalogs, "Id", "Name");
                 return View(model);
             }
 
-            var book = new Book
-            {
-                Title = model.Title,
-                Author = model.Author,
-                Publisher = model.Publisher,
-                CatalogId = model.CatalogId,
-                Copies = new List<BookCopy>()
-            };
+            var existingBook = await _context.Books
+                .Include(b => b.Copies)
+                .FirstOrDefaultAsync(b =>
+                    b.Title == model.Title &&
+                    b.Author == model.Author &&
+                    b.Publisher == model.Publisher &&
+                    b.CatalogId == model.CatalogId);
 
-            // Kitap eklemeden önce SaveChangesAsync yapmıyoruz, EF otomatik id atar.
-            _context.Books.Add(book);
-            await _context.SaveChangesAsync();
+            Book book;
+
+            if (existingBook != null)
+            {
+                book = existingBook;
+            }
+            else
+            {
+                book = new Book
+                {
+                    Title = model.Title,
+                    Author = model.Author,
+                    Publisher = model.Publisher,
+                    Description = model.Description,
+                    CatalogId = model.CatalogId,
+                    Copies = new List<BookCopy>()
+                };
+
+                _context.Books.Add(book);
+                await _context.SaveChangesAsync(); // BookId oluşturmak için
+            }
 
             for (int i = 0; i < model.Stock; i++)
             {
-                book.Copies.Add(new BookCopy
+                var copy = new BookCopy
                 {
                     BookId = book.Id,
-                    PhysicalLocation = model.PhysicalLocation,
+                    PhysicalLocation = model.PhysicalLocations[i],
                     IsBorrowed = false
-                });
+                };
+
+                _context.BookCopies.Add(copy);
             }
 
             await _context.SaveChangesAsync();
@@ -201,23 +226,40 @@ namespace LibraryAutomation.Controllers
         }
 
         // Kitap stok bilgisi listeleme
-        public IActionResult BookStock()
+        public IActionResult BookStock(string searchString)
         {
-            var stockList = _context.Books
+            var booksQuery = _context.Books
                 .Include(b => b.Copies)
-                .Select(b => new BookStockViewModel
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                booksQuery = booksQuery.Where(b =>
+                    b.Title.Contains(searchString) ||
+                    b.Author.Contains(searchString) ||
+                    b.Publisher.Contains(searchString));
+            }
+
+            var books = booksQuery
+                .ToList()  // Veritabanından çek
+                .Select(book => new BookStockViewModel
                 {
-                    Title = b.Title,
-                    Author = b.Author,
-                    Publisher = b.Publisher,
-                    TotalStock = b.Copies.Count,
-                    Available = b.Copies.Count(c => !c.IsBorrowed),
-                    Borrowed = b.Copies.Count(c => c.IsBorrowed)
+                    Title = book.Title,
+                    Author = book.Author,
+                    Publisher = book.Publisher,
+                    TotalStock = book.Copies.Count,
+                    Available = book.Copies.Count(c => !c.IsBorrowed),
+                    PhysicalLocations = book.Copies
+                        .Where(c => !c.IsBorrowed)
+                        .Select(c => c.PhysicalLocation)
+                        .Distinct()
+                        .ToList()
                 })
                 .ToList();
 
-            return View(stockList);
+            return View(books);
         }
+
 
         // Üyelerin ödünç aldığı kitaplar listesi
         public IActionResult MemberBookList()

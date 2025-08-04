@@ -2,7 +2,12 @@
 
 <h2>Kitap Stok Durumu</h2>
 
-<a asp-action="Dashboard" class="btn btn-secondary">← Anasayfaya Geri Dön</a>
+<a asp-action="Dashboard" class="btn btn-secondary mb-3">← Anasayfaya Geri Dön</a>
+
+<form asp-action="BookStock" method="get" class="form-inline mb-3">
+    <input type="text" name="searchString" class="form-control mr-2" placeholder="Kitap adı, yazar veya yayın evi ara" value="@Context.Request.Query["searchString"]" />
+    <button type="submit" class="btn btn-primary">Ara</button>
+</form>
 
 <table class="table table-bordered">
     <thead>
@@ -11,6 +16,8 @@
             <th>Yazar</th>
             <th>Yayın Evi</th>
             <th>Stok Adedi</th>
+            <th>Mevcut Stok Adedi</th>
+            <th>Fiziksel Lokasyonlar</th> <!-- Yeni sütun -->
         </tr>
     </thead>
     <tbody>
@@ -20,7 +27,19 @@
                 <td>@item.Title</td>
                 <td>@item.Author</td>
                 <td>@item.Publisher</td>
-                <td>@item.TotalStock</td>  @* Burada Stock değil TotalStock *@
+                <td>@item.TotalStock</td>
+                <td>@item.Available</td>
+                <td>
+                    @if (item.PhysicalLocations != null && item.PhysicalLocations.Any())
+                    {
+                        <!-- Lokasyonları virgülle ayırarak göster -->
+                        @string.Join(", ", item.PhysicalLocations)
+                    }
+                    else
+                    {
+                        <em>Lokasyon bilgisi yok</em>
+                    }
+                </td>
             </tr>
         }
     </tbody>

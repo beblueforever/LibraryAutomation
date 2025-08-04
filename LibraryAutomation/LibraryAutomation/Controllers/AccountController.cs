@@ -31,9 +31,18 @@ namespace LibraryAutomation.Controllers
         [HttpPost]
         public IActionResult Register(RegisterViewModel model)
         {
-
             if (!ModelState.IsValid)
                 return View(model);
+
+            // Kullanıcı adı kontrolü (hem Admin hem Member tablosunda kontrol)
+            bool userExists = _context.Users.Any(u => u.UserName == model.UserName) ||
+                              _context.Members.Any(m => m.UserName == model.UserName);
+
+            if (userExists)
+            {
+                ModelState.AddModelError("UserName", "Bu kullanıcı adı zaten kullanılıyor.");
+                return View(model);
+            }
 
             if (model.Role == UserRole.Admin)
             {
